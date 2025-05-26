@@ -35,9 +35,11 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "webpack": "^5.99.9"
   },
   "eslintConfig": {
     "extends": [
