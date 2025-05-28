@@ -1,0 +1,64 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "CarlisCool",
+            "password": "password123",
+            "name": "Carl",
+            "email": "carl@gmail.com",
+            "schedule": [
+                {
+                    "id": 1,
+                    "event_id": 1,
+                    "date": "2025-05-28T10:00:00Z",
+                    "events": [
+                        {
+                            "event_title": "Game Night",
+                            "starttime": "17:00",
+                            "endtime": "19:00",
+                            "location": "Marks House"
+                        }                        
+                    ]
+                },
+                {
+                    "id": 2,
+                    "event_id": 2,
+                    "date": "2025-05-29T10:00:01Z",
+                    "events": [
+                        {
+                            "event_title": "Board Game Tournament",
+                            "starttime": "17:00",
+                            "endtime": "19:00",
+                            "location": "Marks House"
+                        },
+                        {
+                            "event_title": "Tournament Afterparty",
+                            "starttime": "20:00",
+                            "endtime": "21:00",
+                            "location": "Marks House"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "event_id": 2,
+                    "date": "2025-05-31T10:00:01Z",
+                    "events": [
+                        {
+                            "event_title": "40K Tournament",
+                            "starttime": "16:00",
+                            "endtime": "18:00",
+                            "location": "Marks House"
+                        },
+                        {
+                            "event_title": "Tournament Afterparty",
+                            "starttime": "19:00",
+                            "endtime": "22:00",
+                            "location": "Marks House"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

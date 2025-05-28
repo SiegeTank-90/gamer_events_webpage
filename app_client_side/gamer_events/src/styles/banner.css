@@ -1,0 +1,30 @@
+.banner-container {
+    background-size: cover;
+    background: 'no-repeat';
+    width: 100%;
+    height: 10;
+}
+
+.banner-title-wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.banner-logo-image {
+    max-width: 5%;
+    max-height: 5%;
+    margin-right: 0.5rem;
+}
+
+.banner-title {
+    font-family: 'Mogra';
+    color: #7EECFD;
+    font-size: 3rem;
+    letter-spacing: 0.225rem;
+    -webkit-text-stroke: 0.005rem;
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: #222 0.01rem 0.01rem 0.25rem;
+    backdrop-filter: drop-shadow(00.01rem 00.01rem 0.25rem #222);
+}

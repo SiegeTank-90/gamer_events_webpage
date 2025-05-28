@@ -1,9 +1,6 @@
 var express = require('express');
 var finalhandler = require('finalhandler');
-var http = require('http');
 var Router = require('router');
-var compression = require('compression');
-var bodyParser = require('body-parser');
 const { Server } = require('https');
 
 var expServer = express();
