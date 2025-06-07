@@ -19,7 +19,7 @@ function LoginPage() {
             <h2 className='login-brandName'>GameFinder</h2>
             <form className="login-form">
               <label className="login-form-label">USERNAME</label>
-              <input type="text" placeholder="Username" required />
+              <input type="text" placeholder="Email" required />
               <label className="login-form-label">PASSWORD</label>
               <input type="password" placeholder="Password" required />
               <Link to="/dashboard"> <button type="submit">Login</button> </Link>
@@ -27,13 +27,6 @@ function LoginPage() {
           </div>
           {/*Link Are Currently Disabled but demo'd as functioning as the feature isn't implemented yet 
         This will throw an ESLINT Warnning until resovlved*/}
-          <div className="login-container">
-            <a className='login-Links'>Sign Up?</a>
-          </div>
-
-          <div className="login-container">
-            <a className='login-Links'>Forgot Username/Password?</a>
-          </div>
         </div>
       </div>
     </div>

@@ -2,13 +2,13 @@ import Banner from '../components/banner.jsx';
 import ScheduleGallery from '../components/schedule_gallery.jsx';
 import '../styles/App.css';
 import '../styles/home.css';
-import data from '../data/data.json';
+//import data from '../../data.json';
 import { Link } from 'react-router';
 
 function HomePage() {
     { /* This is the main dashboard page where users can see their events and settings */ }
     { /* using temp data from data.json */ }
-    let schedule = data.users[0].schedule;
+  {/*  let schedule = data.users[0].schedule; */}
 
     return (
         <div className="App">
@@ -31,7 +31,7 @@ function HomePage() {
                         </div>
                         <div className='vertical-content'>
                             <div className="schedule-visual-wrapper">
-                                <ScheduleGallery schedule={schedule} />
+                               {/* <ScheduleGallery schedule={schedule} />*/}
                             </div>
                             <div className="schedule-settings-wrapper"></div>
                         </div>
