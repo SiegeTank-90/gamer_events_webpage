@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import routes from "./routes/routes.js";
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5050;
 const app = express();
 
 app.use(cors());

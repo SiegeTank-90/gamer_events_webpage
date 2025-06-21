@@ -1,9 +1,41 @@
 import logo from '../images/logo.png';
 import banner from '../images/banner.png';
-import { Link } from 'react-router';
+import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 
-function LoginPage() {
+export default function LoginPage() {
+  let navigate = useNavigate();
+  const [isFailedLogin, setisFailedLogin] = useState(false); // State to track if the login failed
+
+
+  async function handleLogin(e) {
+
+    e.preventDefault(); // Prevent the default form submission behavior
+    const form = e.target;
+    const formData = new FormData(form); // Create a FormData object from the form
+    let email = formData.get("email"); // Get the email from the form data
+    let password = formData.get("password"); // Get the password from the form data
+    // uncomment to move to dashboard
+    // unencrypted password/email for testing purposes
+    console.log("Email: ", email);
+    console.log("Password: ", password);
+    const response = await fetch(`http://localhost:5050/players/${email}/${password}`);
+    console.log("Response: ", response);
+    if (!response.ok) {
+      console.error("Login failed: ", response.statusText);
+      setisFailedLogin(true); // Set the failed login state to true
+    } else {
+
+      const playerData = await response.json(); // Get the player data from the response
+      console.log("Player Data: ", playerData);
+      setisFailedLogin(false); // Reset the failed login state
+      navigate(`/dashboard/${playerData[0].playerName}`); // Redirect to the dashboard page
+
+    }
+  }
+
+
   return (
     <div className="App">
       <div className="App-frame">
@@ -17,20 +49,18 @@ function LoginPage() {
               <img src={logo} className="login-logoimagewrapper-image" alt="logo" />
             </div>
             <h2 className='login-brandName'>GameFinder</h2>
-            <form className="login-form">
+            <form method="post" onSubmit={handleLogin} className="login-form">
               <label className="login-form-label">USERNAME</label>
-              <input type="text" placeholder="Email" required />
+              <input type="text" name='email' placeholder="Email" required />
               <label className="login-form-label">PASSWORD</label>
-              <input type="password" placeholder="Password" required />
-              <Link to="/dashboard"> <button type="submit">Login</button> </Link>
+              <input type="password" name='password' placeholder="Password" required />
+              <button type="submit">Login</button> {/* This button should redirect to the dashboard page TBD::Login Functionality*/}
+              {isFailedLogin && <p className="login-error">Login failed. Please try again.</p>} {/* Show error message if login fails */}
             </form>
           </div>
-          {/*Link Are Currently Disabled but demo'd as functioning as the feature isn't implemented yet 
-        This will throw an ESLINT Warnning until resovlved*/}
+
         </div>
       </div>
     </div>
   )
 }
-
-export default LoginPage;

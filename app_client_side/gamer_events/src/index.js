@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {useState} from 'react';
+
 import './styles/index.css'; // Importing global styles
 import './styles/App.css'; // Importing app specific styles
 
@@ -8,9 +10,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import HomePage from './pages/Home';
 import LoginPage from './pages/Login';
 
+
 const router = createBrowserRouter([
-  {path:"/", element: <LoginPage />},
-  {path:"/dashboard", element: <HomePage />},
+
+  { path: "/", element: <LoginPage /> },
+  { path: "/dashboard/:PlayerName", element: <HomePage /> },
 
 ]);
 

@@ -1,0 +1,27 @@
+.newMatchModelOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.newMatchModel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  background-color: #405F24;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0.01rem 0.01rem 0.25rem #222;
+    backdrop-filter: drop-shadow(00.01rem 00.01rem 0.25rem #222);
+    z-index: 1001;
+}
+.newMatchModelForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
