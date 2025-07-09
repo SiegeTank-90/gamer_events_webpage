@@ -16,7 +16,6 @@ export default function LoginPage() {
     const formData = new FormData(form); // Create a FormData object from the form
     let email = formData.get("email"); // Get the email from the form data
     let password = formData.get("password"); // Get the password from the form data
-    // uncomment to move to dashboard
     // unencrypted password/email for testing purposes
     console.log("Email: ", email);
     console.log("Password: ", password);
@@ -28,7 +27,6 @@ export default function LoginPage() {
     } else {
 
       const playerData = await response.json(); // Get the player data from the response
-      console.log("Player Data: ", playerData);
       setisFailedLogin(false); // Reset the failed login state
       navigate(`/dashboard/${playerData[0].playerName}`); // Redirect to the dashboard page
 

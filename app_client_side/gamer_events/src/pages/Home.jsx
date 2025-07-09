@@ -55,7 +55,6 @@ export default function HomePage() {
    
             const responseStores = await fetch(`http://localhost:5050/matches/${params.PlayerName}`);
             const matchData = await responseStores.json();
-            console.log(typeof matchData[0]._id)
             setMatch(matchData);
             // Handle the games data as needed
 
